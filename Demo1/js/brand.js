@@ -1,5 +1,5 @@
 $(function(){
-	// ajax
+	// ajax 获取数据
 	$.ajax({
 	    url:"./data/main.json",
 	    type:"get",
@@ -17,8 +17,9 @@ $(function(){
 	});
     var hotChose_span = $('.hot_chose span'),
         show_chose = $('.show_chose');
+	// 创建数组 存放已选标签
     var brandList = [];
-	
+	// 热门品牌 点击事件
 	$(document).on("click",'.hot_chose span', function(){
 		var showChose_child = $('.show_chose p')
 		$('.null_chose').css({
@@ -40,7 +41,7 @@ $(function(){
 		}
 		changeUrl()
 	})
-
+	// 我的品牌展示  删除品牌
     $(document).on("click",'.sChose_p', function(){
         var sCp_sptext = brandList.indexOf($(this).children('.sCp_sp').text())
         brandList.splice(sCp_sptext,1)
