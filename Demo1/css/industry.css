@@ -127,8 +127,13 @@ body{
 }
 .list2_chose{
     display: none;
-    height: 10rem;
+    height: 19.5rem;
+    /* padding-bottom: 1rem; */
     background: #ddd;
+}
+.list3_chose{
+    width: 100%;
+    height: 5rem;
 }
 /* 底部确定按钮 */
 .bottom{
