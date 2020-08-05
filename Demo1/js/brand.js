@@ -15,6 +15,7 @@ $(function(){
             hot_chose.append(str);
             // 展示已选择品牌（链接传回来的）
             showBrandList();
+            changeUrl()
 	    }
     });
     // 创建数组 存放已选标签
@@ -62,18 +63,15 @@ $(function(){
         }
     }
     parameter()
-    /*------*/ 
-
-    
-    
+    /*------*/     
 	// 热门品牌 点击事件
 	$(document).on("click",'.hot_chose span', function(){
 		var showChose_child = $('.show_chose p')
 		$('.null_chose').css({
 		    display:'none'
-		})
+        })
 		if(showChose_child.length>4){
-		    alert('品牌订阅已达上限')
+		    console.log('品牌订阅已达上限')
 		}else{
 		    brandList.push($(this).text())
 		    brandList= [...new Set(brandList)];
@@ -83,9 +81,24 @@ $(function(){
 		    }
 		    showChose_child.remove()
 		    show_chose.append(str)
-		}
+        }
+        $(this).toggleClass('active1')
 		changeUrl()
-	})
+    })
+    //点击事件  二次点击  删除品牌展示  
+    $(document).on("click",'.hot_chose .active1', function(){
+        // 重数组中移出品牌名称
+        text = $(this).text()
+        textIndex = brandList.indexOf(text)
+        brandList.splice(textIndex,1)
+        var str2 = ''
+        for(let i of brandList){
+            str2 += '<p class="sChose_p"><span class="sCp_sp">'+i+'</span><span>x</span></p>';
+        }
+        $('.show_chose p').remove()
+        show_chose.append(str2)
+        changeUrl()
+    })
 	// 我的品牌展示  删除品牌  点击事件
     $(document).on("click",'.sChose_p', function(){
         var sCp_sptext = brandList.indexOf($(this).children('.sCp_sp').text())
