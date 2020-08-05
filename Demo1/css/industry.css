@@ -1,6 +1,6 @@
 *{margin: 0;padding: 0;list-style: none;text-decoration: none;}
 a,span,li{font-size: 0.9rem;}
-body{
+body,html{
     font-size: 15px;
     width: 100%;
     height: 100%;
@@ -8,7 +8,7 @@ body{
 }
 #all{
     width: 100%;
-    height: 48rem;
+    height: 100%;
     overflow-y: auto;
     background: #f5f5f5;
 }
@@ -27,8 +27,9 @@ body{
 }
 .page_main{
     width: 92%;
-    height: 100%;
+    height: 90%;
     margin: 0 auto;
+    overflow: auto;
 }
 
 /*  顶部  品牌/公司 */
@@ -51,6 +52,10 @@ body{
     float: right;
     color: red;
 /*    padding-right: 1rem; */
+}
+.ba_change .url_icon {
+    font-size: 0.9rem;
+    margin-left: 0.2rem;
 }
 /* 展示所选内容 */
 .banner_show{
@@ -105,6 +110,7 @@ body{
 .chose_box p{
     width: 100%;
     margin: 0 auto;
+    float: left;
 }
 .list_chose span,.list2_chose span{
     display: inline-block;
@@ -112,9 +118,9 @@ body{
     height: 2.4rem;
     line-height: 2.4rem;
     text-align: center;
-    margin:0 4.5% 3% 0;
+    margin:0.4rem 4% 0.3rem 0;
     float: left;
-    border: 0.025rem solid rgb(134, 134, 134);
+    border: 0.05rem solid rgba(172, 171, 171, 0.5);
     border-radius: 0.4rem;
     background: #f5f5f5;
 }
@@ -125,11 +131,24 @@ body{
 .list1_chose{
     height: 3rem;
 }
-.list2_chose{
+.chose_box .list2_chose{
     display: none;
-    height: 19.5rem;
-    /* padding-bottom: 1rem; */
-    background: #ddd;
+    margin:0.5rem 0rem;
+    background: rgba(209, 206, 206,0.4);
+    position: relative;
+}
+/* 展示时的小三角 */
+.list2_chose::before{
+    content: '';
+    position: absolute;
+    top: -0.4rem;
+    left: 3.5rem;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(209, 206, 206,0.4);
+    border-bottom-color: rgba(209, 206, 206,0.4);
+
+
 }
 .list3_chose{
     width: 100%;
@@ -137,19 +156,21 @@ body{
 }
 /* 底部确定按钮 */
 .bottom{
+    background: white;
     width: 100%;
-    height: 4rem;
+    height: 8%;
     position: fixed;
     bottom:0;
     box-shadow:0rem  0rem 0.1rem 0.1rem #ddd;
     text-align: center;
     line-height: 4rem;
+    z-index: 1000;
 }
 .bottom a{
     color: white;
     background: rgb(245, 39, 39);
     font-size: 1rem;
-    padding: 0.7rem 10rem;
-    border-radius: 0.3rem;
+    padding: 0.7rem 11rem;
+    border-radius: 0.4rem;
 }
 

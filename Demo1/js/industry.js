@@ -11,7 +11,7 @@ $(function(){
         if(r!=null){
             return decodeURI(r[2]);
         }else{
-            return null;
+            return '';
         }
     }
 	function addBanner(){
@@ -105,7 +105,7 @@ $(function(){
 	function list2Num(){
 		num = arrylist2.length
 		if(num>0){
-			$('.showlist2').addClass('active').text(''+str4+num+'')
+			$('.showlist2').addClass('active').text(''+str4+"  "+num+'')
 		}else{
 			$('.showlist2').removeClass('active').text(''+str4+'')
 		}
