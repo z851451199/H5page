@@ -30,6 +30,7 @@ $(function(){
             })
             titleLabel.append(titleStr)
             textMain.append(contentStr)
+			$('.insertCont a').attr('href','upldimg.html?id='+textId+'')
 	    }
     });
 })
