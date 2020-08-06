@@ -17,6 +17,7 @@ $(function(){
             showBrandList();
             changeUrl()
             changeClass()
+			//console.log(brandList)
 	    }
     });
     /* 封装函数  对数组已存内容 添加样式 */ 
@@ -132,7 +133,7 @@ $(function(){
     $(document).on("click",'.sChose_p', function(){
         var sCp_sptext = brandList.indexOf($(this).children('.sCp_sp').text())
         brandList.splice(sCp_sptext,1)
-        console.log(brandList)
+        //console.log(brandList)
         $(this).remove() 
         if(show_chose.find('p').length == 0){
             $('.null_chose').css({
@@ -148,7 +149,7 @@ $(function(){
         var spanText = span.map(function(){
             return $(this).text();
           }).toArray();
-        console.log(text)
+        //console.log(text)
         for(let j of spanText){
             if(text == j){
                 span.eq(spanText.indexOf(j)).removeClass('active1')
@@ -159,6 +160,7 @@ $(function(){
     function changeUrl(){
         $('.hot_Jump a').attr('href','industry.html?brand='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'')
         $('.search a').attr('href','industry.html?brand='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'')
+        $('.bottom a').attr('href','news.html?brand='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'')
     }
 	
 })

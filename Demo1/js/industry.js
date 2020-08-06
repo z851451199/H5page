@@ -98,7 +98,7 @@ $(function(){
             /*  将返回已选数据  进行重新添加样式  */ 
             addClass(arrylist1,'.list_chose span')
             addClass(arrylist2,'.list2_chose span')
-
+			
 	    }
     });
     /* ---当家居详情点击后 家居家装需要改变样式--- */ 
@@ -120,7 +120,7 @@ $(function(){
         text = $(this).text()
         arrylist1.push($(this).text())
         arrylist1= [...new Set(arrylist1)];
-        console.log(arrylist1)
+        //console.log(arrylist1)
         // 给选中标签添加类名
         $(this).toggleClass('active')
         changeUrl()
@@ -151,8 +151,9 @@ $(function(){
 		list2Num()
     })
     function changeUrl(){
-        $(".ba_change").attr('href','brand.html?brandList='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'')
-        $(".bs_noChose").attr('href','brand.html?brandList='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'')
+        $(".ba_change").attr('href','brand.html?brandList='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'');
+        $(".bs_noChose").attr('href','brand.html?brandList='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'');
+        $('.bottom a').attr('href','news.html?brand='+brandList+'&arrylist1='+arrylist1+'&arrylist2='+arrylist2+'');
     }
 })
 

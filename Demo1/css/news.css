@@ -1,0 +1,157 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+a,span,li{font-size: 0.9rem;}
+body,html{
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#all{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+/* 去右边距 */
+#all .m_right{
+    margin-right: 0;
+}
+#all .active{
+    color: red;
+    font-weight: bold;
+}
+/* 主体 */
+.newPage{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/* 顶部搜索框 */
+.search{
+    float: left;
+    width: 100%;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+}
+.search_left{
+    float: left;
+    width: 70%;
+    height: 90%;
+    position: relative;
+}
+.search_left .search_icon{
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    left: 1rem;
+    top: 0.5rem;
+}
+.search_left input{
+    width: 87%;
+    height: 100%;
+    margin: 0 0 0 0.8rem;
+    outline: none;
+    border: 0rem;
+    box-shadow: 0 0 0.1rem 0.1rem #ddd;
+    padding-left: 1.8rem;
+}
+.search_right{
+    float: right;
+    padding: 0.5rem;
+    background: rgb(243, 45, 45);
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 0.3rem;
+}
+/* 导航栏 */
+.newsNav{
+    float: left;
+    width: 100%;
+    height: 2.5rem;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem #ddd;
+    overflow-x: auto;
+
+}
+.choseShow{
+    width:40rem;
+    height:100%;
+}
+.choseShow *{
+    float: left;
+    font-size: 0.9rem;
+    margin:0.8rem 0.5rem 0 0.7rem;
+    color: #000;
+}
+/* 文章列表 */
+.content_list{
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.content_list a{
+    display: inline-block;
+    width: 95%;
+    margin: 1rem auto;
+}
+.ctlist_main{
+    float: left;
+    width: 100%;
+    /* margin: 1rem auto; */
+    border-bottom: 0.08rem solid #ddd;
+}
+.ctlist_left{
+    float: left;
+    width: 67%;
+}
+.ctlist_img{
+    float: right;
+    width: 30%;
+}
+.ctlist_img img{
+    width: 100%;
+}
+.ctlt_top{
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+    color: #000;
+}
+/*  */
+.recommend{
+    display: inline-block;
+    color: white;
+    background: rgb(247, 78, 35);
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    width: 4rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    margin-right: 0.4rem;
+}
+
+/*  */
+.ctlt_bottom{
+    margin: 0.4rem 0 0.8rem 0;
+}
+.ctlt_bottom span:first-child{
+    font-size: 0.7rem;
+    color: rgb(158, 156, 156);
+}
+.ctlt_bottom span:last-child{
+    float: right;
+    font-size: 0.7rem;
+    color: rgb(110, 109, 109);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.5rem;
+    background: #ddd;
+}
+
+
+
+
+
+

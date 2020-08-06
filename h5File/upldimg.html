@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/upldimg.js"></script>
+    <link rel="stylesheet" href="css/upldimg.css"/>
+</head>
+<body>
+    <div id="all">
+        <article class="heard">
+            <p class="up_nav"><span class="up_text active">插入文字</span><span class="up_img">插入图片</span></p>
+            <input type="file" name="path[]" id="file0" placeholder="caksak"/>
+        </article>
+        <article class="show_main">
+            <textarea class="text_box" placeholder="请输入..."></textarea>
+            <img class="coverPicture" src="" id="img0">
+        </article>
+        <article class="keep_box">
+            <p>
+                <input type="checkbox" class="ckb" name="checkbox_style">
+                <label  for="checkbox_style" class="ckb_label"></label >
+                <span class="Tips">存为模板</span><span>下次可以直接选择使用</span>
+            </p>
+            <p>
+                <input type="checkbox" class="ckb" name="checkbox_style">
+                <label  for="checkbox_style" class="ckb_label"></label >
+                <span class="Tips">插入所有文章</span><span>所有文章都自动插入该内容</span>
+            </p>
+            <p>
+                <a class="confirm">确 定</a>
+            </p>
+        </article>
+        <article class="mould">
+            <h3>选择模板</h3>
+            <article class="mould_text">
+                <p>即使对方接受法律</p>
+                <p class="delete_text"><span></span>删除</p>
+            </article>
+            <article class="mould_img">
+                <img src="../Demo1/img/zzf.jpg">
+                <p class="delete_text"><span></span>删除</p>
+            </article>
+        </article>
+        
+    </div>
+</body>
+</html>

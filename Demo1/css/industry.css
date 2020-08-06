@@ -66,12 +66,14 @@ body,html{
     text-align: center;
 }
 .bs_noChose{
-    margin: 0 auto;
-    padding: 0.6rem 2rem;
-    border-radius: 0.6rem;
-    color: red;
-    background: rgb(243, 198, 205);
-    border: 0.01rem solid red;
+	display: inline-block;
+	width: 50%;
+	margin: 0 auto;
+	padding: 0.6rem 2rem;
+	border-radius: 0.6rem;
+	color: red;
+	background: rgba(243, 198, 205,0.4);
+	border: 0.03rem solid rgba(248, 3, 3,0.5);
 }
 .sCp_sp{
 	float: left;

@@ -1,0 +1,91 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+a,span,li{font-size: 0.9rem;}
+body,html{
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#all{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #f5f5f5;
+}
+/* 去右边距 */
+#all .m_right{
+    margin-right: 0;
+}
+#all .active{
+    color: red;
+    font-weight: bold;
+}
+/* 主体 */
+.textPage{
+    width: 90%;
+    height: 100%;
+    margin: 0rem auto;
+}
+/* 头部 */
+.heard{
+    float: left;
+    width: 100%;
+    height: 6rem;
+    margin: 1.5rem auto;
+    /* background: peachpuff; */
+}
+.heard_title{
+    width: 90%;
+    margin: 0 auto;
+}
+/* 展示标题 */
+.showTitle{
+    width: 100%;
+    text-align: center;
+}
+/* 展示用户信息 */
+.showUser{
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0 0 0.3rem 0.3rem #ddd;
+    text-align: center;
+    position: relative;
+}
+.showUser img{
+    margin-top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+}
+.showUser p{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+/* 插入内容 */
+.insertCont{
+    float: left;
+    width: 100%;
+    margin: 1rem auto;
+}
+.insertCont a{
+    display: inline-block;
+    width: 100%;
+    height: 2.4rem;
+    font-size: 1rem;
+    background: rgba(238, 179, 164, 0.6);
+    text-align: center;
+    line-height: 2.4rem;
+    border-radius: 0.5rem;
+    border:0.1rem dotted rgb(245, 131, 31);
+    color: rgb(238, 116, 9);
+}
+/* 主体内容 */
+.textMain{
+    float: left;
+    width: 100%;
+}
+/* 样式  草稿 以下可更改 */
+.textMain img{
+    width: 100%;
+}
