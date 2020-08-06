@@ -4,12 +4,14 @@ $(function(){
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)","i");
         var r = window.location.search.substr(1).match(reg);
         if(r!=null){
-            return decodeURI(r[2]);
+            // return decodeURI(r[2]);
+            return r[2];
         }else{
             return null;
         }
     }
     var textId = getUrl("id")
+    var DataUrl = getUrl("DataUrl")
     // ajax 获取数据
 	$.ajax({
 	    url:"./data/main.json",
@@ -30,7 +32,18 @@ $(function(){
             })
             titleLabel.append(titleStr)
             textMain.append(contentStr)
+            show_DataUrl(DataUrl)
 			$('.insertCont a').attr('href','upldimg.html?id='+textId+'')
 	    }
     });
+    // 封装函数  如果跳转回来有图片 则显示图片
+    function show_DataUrl(DataUrl){
+        if(DataUrl){
+            $(".mineTxt_none").hide()
+            $(".show_insert").show().children('img').attr("src",DataUrl)
+        }else{
+            $(".mineTxt_none").show()
+            $(".show_insert").hide()
+        }
+    }
 })

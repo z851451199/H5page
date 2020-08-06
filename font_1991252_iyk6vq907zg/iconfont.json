@@ -1,0 +1,86 @@
+{
+  "id": "1991252",
+  "name": "微信H5页面",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "68658",
+      "name": "写",
+      "font_class": "icon",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "950081",
+      "name": "对勾",
+      "font_class": "duigou",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "7489749",
+      "name": "图片",
+      "font_class": "thumb",
+      "unicode": "e77c",
+      "unicode_decimal": 59260
+    },
+    {
+      "icon_id": "7923964",
+      "name": "删 除",
+      "font_class": "shanchu",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "11638915",
+      "name": "对勾",
+      "font_class": "duigou1",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "13200958",
+      "name": "删 除",
+      "font_class": "shanchu1",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "2589437",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "7564788",
+      "name": "上三角",
+      "font_class": "shangsanjiao",
+      "unicode": "e77f",
+      "unicode_decimal": 59263
+    },
+    {
+      "icon_id": "7598547",
+      "name": "差号",
+      "font_class": "chahao",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "8284407",
+      "name": "差号",
+      "font_class": "chahao1",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "13564205",
+      "name": "分页 - 下一页",
+      "font_class": "fenye-xiayiye",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

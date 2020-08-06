@@ -9,11 +9,11 @@ $(function(){
         } else if (window.webkitURL!=undefined) { // webkit or chrome
             url = window.webkitURL.createObjectURL(file) ;
         }
-            return url ;
+            return url;
     }
     //显示图像 预览效果 
     $("#file0").change(function(){
-    　　var objUrl = getObjectURL(this.files[0]) ;
+    　　var objUrl = getObjectURL(this.files[0]);
     　　console.log("objUrl = "+objUrl) ;
         if (objUrl) {
         　　$("#img0").attr("src", objUrl) ;

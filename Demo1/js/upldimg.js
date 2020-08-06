@@ -9,7 +9,7 @@ $(function(){
 	         return null;
 	     }
 	 }
-	 var textId = getUrl("id")
+     var textId = getUrl("id");
 	 // ajax 获取数据  接收后台存储得用户‘模板’
 	 $.ajax({
 	     url:"./data/main.json",
@@ -18,7 +18,7 @@ $(function(){
 	     async:true,
 	     data:"",
 	     success:function(data){
-	 		$('.confirm').attr('href','textDetail.html?id='+textId+'')
+            confirmUrl()
 	     }
 	 });
     // 展示本地图片
@@ -31,18 +31,29 @@ $(function(){
         } else if (window.webkitURL!=undefined) { // webkit or chrome
             url = window.webkitURL.createObjectURL(file) ;
         }
-            return url ;
+        return url ;
     }
+
     //显示图像 预览效果 
-    $("#file0").change(function(){
-    　　var objUrl = getObjectURL(this.files[0]) ;
-    　　console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-        　　$("#img0").attr("src", objUrl) ;
-        　　$("#img0").show();
-        }
-        
-    });
+	var files = '',DataUrl='';
+	$("#file0").change(function(){
+		files = this.files[0]
+		if(!/image\/\w+/.test(files.type)){ 
+			alert("您好！此处需填入图片！"); 
+			return false; 
+		} 
+		var reader = new FileReader(); 
+		//采用base64   将文件以Data URL形式读入页面 
+		reader.readAsDataURL(files); 
+		reader.onload=function(e){ 
+			DataUrl = this.result
+			$("#img0").attr("src",this.result);
+			$("#img0").show();
+			confirmUrl()
+		} 
+	});
+	
+	
     // 点击插入图片  进入（input type="file"）
     $('.up_img').on("click",function(){
         /* 当已有图片时 点击插入图片 展示已有图片  不用在选择  */
@@ -78,5 +89,13 @@ $(function(){
         let ckbIndex = $(this).index(".ckb_label")
         $(".ckb").eq(ckbIndex).click()
     })
+    // 点击后将此模板删除
+    $('.delete_text').on("click",function(){
+        $(this).parent(".mould_box").remove()
 
+    })
+    //监听图片路径变化  改变链接地址
+    function confirmUrl(){
+        $('.confirm').attr('href','textDetail.html?id='+textId+'&DataUrl='+DataUrl+'')
+    }
 })

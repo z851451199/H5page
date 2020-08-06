@@ -31,7 +31,6 @@ body,html{
 .heard{
     float: left;
     width: 100%;
-    height: 6rem;
     margin: 1.5rem auto;
     /* background: peachpuff; */
 }
@@ -42,6 +41,8 @@ body,html{
 /* 展示标题 */
 .showTitle{
     width: 100%;
+	font-weight: 500;
+	font-size: 1.2rem;
     text-align: center;
 }
 /* 展示用户信息 */
@@ -60,16 +61,17 @@ body,html{
     border-radius: 3rem;
 }
 .showUser p{
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
 }
 /* 插入内容 */
 .insertCont{
     float: left;
     width: 100%;
-    margin: 1rem auto;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
-.insertCont a{
+.insertCont .mineTxt_none{
     display: inline-block;
     width: 100%;
     height: 2.4rem;
@@ -80,6 +82,36 @@ body,html{
     border-radius: 0.5rem;
     border:0.1rem dotted rgb(245, 131, 31);
     color: rgb(238, 116, 9);
+}
+
+/* 显示插入得图片或文字 */
+.show_insert{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.show_insert img{
+    width: 100%;
+    margin: 1rem auto; 
+}
+.show_insert p{
+    width: 6rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+    background: rgb(235, 117, 7);
+    color: white;
+    text-align: center;
+    line-height: 1.8rem;
+    border-radius: 0.4rem;
+    position: relative;
+}
+.show_insert p::before{
+    content: "";
+    border-width: 0.1rem 0.5rem 0.6rem 0;
+    border-style: solid;
+    border-color: transparent transparent rgb(235, 117, 7);
+    position: absolute;
+    top: -0.6rem;
 }
 /* 主体内容 */
 .textMain{
